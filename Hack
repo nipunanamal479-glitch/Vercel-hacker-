@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Vulnerable Lab</title>
+</head>
+<body>
+    <h2>Admin Login</h2>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="checkLogin()">Login</button>
+    <p id="message"></p>
+
+    <script>
+        function checkLogin() {
+            var pass = document.getElementById("password").value;
+            // මේ තියෙන්නේ hacker කෙනෙක්ට ඕන කරන දුර්වල තැන!
+            if (pass === "SuperSecret123") {
+                document.getElementById("message").innerHTML = "Welcome Admin! Flag: NIPUNA_HACK_2026";
+            } else {
+                document.getElementById("message").innerHTML = "Access Denied!";
+            }
+        }
+    </script>
+</body>
+</html>
